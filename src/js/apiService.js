@@ -8,6 +8,16 @@ export default class ApiService {
         this.page = 1;
 }
   async fetchImages() {
+// const searchParams = new URLSearchParams({
+    //   image_type: photo,
+    //   orientation: horizontal,
+    //   q: this.query,
+    //   page: this.page,
+    //   per_page: 12,
+    //   key: API_KEY,
+    // });
+    // const url = `${BASE_URL}/?${searchParams}`
+
     const srchQuery = `?image_type=photo&orientation=horizontal&q=${this.query}&page=${this.page}&per_page=12&key=${API_KEY}`;
     
     try {
